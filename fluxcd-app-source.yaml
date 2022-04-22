@@ -9,3 +9,5 @@ spec:
   ref:
     branch: main
   url: https://github.com/devops-magazine/fluxcd-app
+  secretRef:
+    name: fluxcd-app-auth
