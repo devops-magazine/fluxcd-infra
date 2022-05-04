@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-image-updates
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-image-updates
+  template:
+    metadata:
+      labels:
+        app: nginx-image-updates
+    spec:
+      containers:
+      - name: nginx
+        image: ghcr.io/devops-magazine/nginx:latest
+        ports:
+        - containerPort: 80
