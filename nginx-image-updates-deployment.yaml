@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: ghcr.io/devops-magazine/nginx:latest
+        image: ghcr.io/devops-magazine/nginx:5.0.0 # {"$imagepolicy": "flux-system:nginx-image-updates-image-policy"}
         ports:
         - containerPort: 80
       imagePullSecrets:
